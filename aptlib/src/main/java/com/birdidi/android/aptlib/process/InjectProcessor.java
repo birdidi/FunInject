@@ -125,6 +125,7 @@ public class InjectProcessor extends AbstractProcessor {
 
             TypeSpec bindClass = TypeSpec.classBuilder(className)
                     .addField(fieldSpec)
+                    .addModifiers(Modifier.PUBLIC)
                     .addMethod(constructorMethod)
                     .addMethod(bindMethod)
                     .build();
